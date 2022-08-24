@@ -75,7 +75,7 @@ for contador, perm in enumerate(permutacao(listaIndex)):
     if contador >= limite:
         break
 
-    custoAtual = distancia_eclid(perm, listaCoord, CoordR)
+    custoAtual = distancia(perm, listaCoord, CoordR)
     if custoAtual <= custoMin:
         listaMin = perm
         custoMin = custoAtual
