@@ -1,1 +1,6 @@
-Implementação do algoritmo de força bruta proposto no relatório de Otimização de Rotas com algumas otimizações.
+Implementação do algoritmo de força bruta proposto no relatório de Otimização de Rotas com algumas otimizações de implementação.
+
+Notas:
+ É possivel reduzir o tempo de execução ao adicionar uma função O(n²) que monte a matriz de adjacência com os pesos,
+ e modificando a função responsável pelo calculo da distância total, para que apenas some as arestas de R-R 
+ removendo a necessidade realizar o custoso calculo da distãncia euclidiana n!*(n+1) vezes.
