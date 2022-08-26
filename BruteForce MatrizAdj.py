@@ -30,8 +30,8 @@ def GerarMatriz(lista):
 def GerarLRx(lista, Rc):
     LRx = []
 
-    for i in range(len(lista)):
-        LRx.append(sqrt(((lista[i][0] - Rc[0]) ** 2) + ((lista[i][1] - Rc[1]) ** 2)))
+    for i in lista:
+        LRx.append(sqrt(((i[0] - Rc[0]) ** 2) + ((i[1] - Rc[1]) ** 2)))
 
     return LRx
 
@@ -57,7 +57,7 @@ listaFinal = []
 custoMin = float('inf')
 
 
-CoordR = [40.7, 53.5]#list(map(float, input("Insira as coordenadas x e y do centro de distribuiçao R, separadas apenas por espaço:\n").split()))
+CoordR = list(map(float, input("Insira as coordenadas x e y do centro de distribuiçao R, separadas apenas por espaço:\n").split()))
 
 listaTemp = list(input("Insira o nome dos pontos de entrega e suas coordenadas no formato: Ponto1 x y, Ponto2 x y,...\n").split(", "))
 
