@@ -7,4 +7,5 @@ Notas:
  removendo a necessidade realizar o custoso calculo da distãncia euclidiana n!*(n+1) vezes.
  
  **Concluido** Programa alternativo utilizando a matriz de adjacência já está disponível.
+   Comparativos em Resultados.png
  
