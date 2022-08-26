@@ -7,5 +7,5 @@ Notas:
  removendo a necessidade realizar o custoso calculo da distãncia euclidiana n!*(n+1) vezes.
  
  **Concluido** Programa alternativo utilizando a matriz de adjacencia já está disponível.
- ![plot](Resultados.png)
+ ![plot](https://github.com/lucaslombardi07/PISI2-Brute-Force/blob/2cf3c886c0e0604e0f4643d1537a98a7cc20eff9/Resultados.png)
  
