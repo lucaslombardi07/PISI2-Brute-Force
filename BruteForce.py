@@ -1,13 +1,6 @@
 from math import sqrt
 import time
 
-def fatorial(n):
-    fact = 1
-    for num in range(2, n + 1):
-        fact = fact * num
-    return(fact)
-
-
 def distancia(k, val, R): #formula resumida da distancia, omitindo as raizes para economizar operações
 
     dist = (val[k[0]][0] - R[0])**2 + (val[k[0]][1] - R[1])**2
@@ -32,7 +25,7 @@ def distancia_eclid(seq, val, R): #formula completa da distancia euclidiana
 
 
 def permutacao(lista):
-    if len(lista) <= 1:
+    if len(lista) <= 2:
         yield lista
 
     else:
@@ -53,7 +46,6 @@ listaFinal = []
 custoMin = float('inf')
 
 
-
 CoordR = list(map(float, input("Insira as coordenadas x e y do centro de distribuiçao R, separadas apenas por espaço:\n").split()))
 
 listaTemp = list(input("Insira o nome dos pontos de entrega e suas coordenadas no formato: Ponto1 x y, Ponto2 x y,...\n").split(", "))
@@ -66,19 +58,17 @@ for i, item in enumerate(listaTemp): # tratamento das entradas
     listaCoord.append(list(map(float, subList[1:])))
 
 
+
 print("Processando...")
 start = time.time()
 
-limite = fatorial(i + 1) // 2
-
-for contador, perm in enumerate(permutacao(listaIndex)):
-    if contador >= limite:
-        break
+for perm in permutacao(listaIndex):
 
     custoAtual = distancia(perm, listaCoord, CoordR)
     if custoAtual <= custoMin:
         listaMin = perm
         custoMin = custoAtual
+
 
 
 for t in listaMin:  # organização da lista de nomes dos pontos
@@ -89,4 +79,4 @@ listaFinal = ["R"] + listaFinal + ["R"]
 print(f"melhor caminho é {listaFinal} custo: {distancia_eclid(listaMin, listaCoord, CoordR)}")
 
 end = time.time()
-print(end-start)
+print(f"tempo: {end-start}s")
